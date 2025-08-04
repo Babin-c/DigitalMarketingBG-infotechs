@@ -17,18 +17,21 @@ window.addEventListener('scroll', function () {
 });
 
 // Back to top button
-const backToTopButton = document.getElementById('backToTop');
-window.addEventListener('scroll', function () {
-    if (window.scrollY > 300) {
-        backToTopButton.style.display = 'block';
+window.addEventListener('scroll', function() {
+    var backToTop = document.getElementById('backToTop');
+    if (window.pageYOffset > 300) {
+        backToTop.classList.add('show');
     } else {
-        backToTopButton.style.display = 'none';
+        backToTop.classList.remove('show');
     }
 });
 
-backToTopButton.addEventListener('click', function (e) {
+document.getElementById('backToTop').addEventListener('click', function(e) {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
 
 // Animate stats counter
@@ -120,4 +123,98 @@ document.addEventListener('DOMContentLoaded', function () {
             particlesContainer.appendChild(particle);
         }
     }
+});
+
+// portfolio
+document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-button-group button');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const moreItems = document.querySelectorAll('.more-items');
+    const toggleButton = document.getElementById('toggleProjects');
+    let showingAll = false;
+
+    // Only show toggle button if there are hidden items
+    if (moreItems.length === 0) {
+        toggleButton.style.display = 'none';
+    }
+
+    // Filter functionality
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+
+            // Show/hide items based on filter
+            portfolioItems.forEach(item => {
+                if (filterValue === '*' || item.classList.contains(filterValue.substring(1))) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Reset the toggle button state when filtering
+            showingAll = false;
+            toggleButton.textContent = 'View More Projects';
+
+            // Hide button if filtered results don't have more items
+            const filteredMoreItems = document.querySelectorAll(`.more-items:not([style*="display: none"])`);
+            toggleButton.style.display = filteredMoreItems.length > 0 ? 'inline-block' : 'none';
+        });
+    });
+
+    // Toggle more/less projects
+    toggleButton.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        showingAll = !showingAll;
+
+        if (showingAll) {
+            moreItems.forEach(item => {
+                item.style.display = 'block';
+            });
+            toggleButton.textContent = 'View Less Projects';
+        } else {
+            moreItems.forEach(item => {
+                item.style.display = 'none';
+            });
+            toggleButton.textContent = 'View More Projects';
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggleProjects');
+    const viewMoreText = toggleButton.querySelector('.view-more-text');
+    const arrowIcon = toggleButton.querySelector('.arrow-icon');
+
+    // Initial animation
+    setTimeout(() => {
+        toggleButton.classList.add('pulse');
+    }, 1000);
+
+    // Remove pulse animation on hover
+    toggleButton.addEventListener('mouseenter', function () {
+        this.classList.remove('pulse');
+    });
+
+    // Toggle functionality
+    toggleButton.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const isShowingMore = this.classList.toggle('show-less');
+        viewMoreText.textContent = isShowingMore ? 'View Less Projects' : 'View More Projects';
+
+        // Add temporary pulse effect when toggling
+        this.classList.remove('pulse');
+        void this.offsetWidth; // Trigger reflow
+        this.classList.add('pulse');
+        setTimeout(() => this.classList.remove('pulse'), 2000);
+    });
 });

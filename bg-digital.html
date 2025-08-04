@@ -25,38 +25,138 @@
     <div class="particles" id="particles"></div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <div class="container">
-            <a href="bg-digital.html" data-aos="fade-down" data-aos-delay="100">
-                <img src="/logos/Logo.png" width="180px" alt="">
+            <a class="navbar-brand" href="#">
+                <img src="/logos/Logo.png" width="180" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                    <li class="nav-item">
                         <a class="nav-link active" href="#home">Home</a>
                     </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
-                        <a class="nav-link" href="#services">Services</a>
+
+                    <!-- Mega Menu Item with only Digital Marketing -->
+                    <li class="nav-item dropdown megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <div class="dropdown-menu bgd-megamenu-content" aria-labelledby="servicesDropdown">
+                            <div class="container">
+                                <div class="row">
+                                    <!-- Column 1 -->
+                                    <div class="col-md-6">
+                                        <!-- Row 1 -->
+                                        <div class="bgd-service-card bgd-service-seo">
+                                            <div class="bgd-service-icon-text">
+                                                <div class="bgd-service-icon">
+                                                    <img src="/icons/seo.gif" width="40px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h5>SEO Services</h5>
+                                                    <p>Boost organic traffic with optimization strategies</p>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="bgd-service-link">→</a>
+                                        </div>
+
+                                        <!-- Row 2 -->
+                                        <div class="bgd-service-card bgd-service-content">
+                                            <div class="bgd-service-icon-text">
+                                                <div class="bgd-service-icon">
+                                                    <img src="/icons/content-marketing.gif" width="40px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h5>Content Marketing</h5>
+                                                    <p>Engage audiences with strategic content</p>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="bgd-service-link">→</a>
+                                        </div>
+
+                                        <!-- Row 3 -->
+                                        <div class="bgd-service-card bgd-service-analytics">
+                                            <div class="bgd-service-icon-text">
+                                                <div class="bgd-service-icon">
+                                                    <img src="/icons/data-analysis.gif" width="40px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h5>Analytics & Reporting</h5>
+                                                    <p>Data-driven insights and tracking</p>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="bgd-service-link">→</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Column 2 -->
+                                    <div class="col-md-6">
+                                        <!-- Row 1 -->
+                                        <div class="bgd-service-card bgd-service-ppc">
+                                            <div class="bgd-service-icon-text">
+                                                <div class="bgd-service-icon">
+                                                    <img src="/icons/ads.gif" width="40px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h5>PPC Management</h5>
+                                                    <p>Maximize ROI from ad campaigns</p>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="bgd-service-link">→</a>
+                                        </div>
+
+                                        <!-- Row 2 -->
+                                        <div class="bgd-service-card bgd-service-email">
+                                            <div class="bgd-service-icon-text">
+                                                <div class="bgd-service-icon">
+                                                    <img src="/icons/email-marketing.gif" width="40px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h5>Email Marketing</h5>
+                                                    <p>Convert subscribers with automation</p>
+                                                </div>
+                                            </div>
+                                            <a href="email-marketing.html" class="bgd-service-link">→</a>
+                                        </div>
+
+                                        <!-- Row 3 -->
+                                        <div class="bgd-service-card bgd-service-social">
+                                            <div class="bgd-service-icon-text">
+                                                <div class="bgd-service-icon">
+                                                    <img src="/icons/hashtags.gif" width="40px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h5>Social Media Marketing</h5>
+                                                    <p>Grow your brand across platforms</p>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="bgd-service-link">→</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
-                        <a class="nav-link" href="#about">About</a>
+
+                    <!-- Other menu items -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                    <li class="nav-item">
                         <a class="nav-link" href="#portfolio">Portfolio</a>
                     </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-delay="600">
+                    <li class="nav-item">
                         <a class="nav-link" href="#testimonials">Testimonials</a>
                     </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-delay="700">
+                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
-                <a href="#contact" class="btn btn-primary ms-lg-3 pulse rounded-5" data-aos="fade-down"
-                    data-aos-delay="800">Get
-                    Started</a>
+                <a href="#contact" class="btn btn-primary ms-lg-3">Get Started</a>
             </div>
         </div>
     </nav>
@@ -86,8 +186,8 @@
                 </div>
                 <div class="col-lg-6 d-none d-lg-block animate__animated animate__fadeIn animate__delay-1s"
                     data-aos="fade-left" data-aos-delay="500">
-                    <img src="/images/1726.jpg" alt="Digital Marketing"
-                        class="img-fluid floating " style="border-radius: 20px;">
+                    <img src="/images/1726.jpg" alt="Digital Marketing" class="img-fluid floating "
+                        style="border-radius: 20px;">
                 </div>
             </div>
         </div>
@@ -190,7 +290,7 @@
                         <h4 class="text-center">Email Marketing</h4>
                         <p class="text-muted mb-3">Nurture leads and convert customers with personalized email campaigns
                             that deliver results.</p>
-                        <a href="#" class="text-primary text-decoration-none fw-medium">Learn More <i
+                        <a href="email-marketing.html" class="text-primary text-decoration-none fw-medium">Learn More <i
                                 class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
@@ -313,79 +413,145 @@
                     <p class="text-muted">Take a look at some of our successful digital marketing campaigns.</p>
                 </div>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/600x400?text=SEO+Campaign" alt="Project 1"
-                            class="img-fluid portfolio-img">
+
+            <!-- Filter Buttons -->
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <div class="filter-button-group">
+                        <button class="btn btn-outline-primary rounded-start-5 active" data-filter="*">All
+                            Projects</button>
+                        <button class="btn btn-outline-primary" data-filter=".seo">SEO</button>
+                        <button class="btn btn-outline-primary" data-filter=".social">Social Media</button>
+                        <button class="btn btn-outline-primary" data-filter=".ppc">PPC</button>
+                        <button class="btn btn-outline-primary" data-filter=".email">Email</button>
+                        <button class="btn btn-outline-primary" data-filter=".content">Content</button>
+                        <button class="btn btn-outline-primary rounded-end-5" data-filter=".brand">Brand</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Items -->
+            <div class="row g-4 portfolio-container">
+                <div class="col-lg-3 col-md-6 portfolio-item seo" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-card">
+                        <img src="/product imgs/seo2.jpeg" alt="Project 1" class="img-fluid portfolio-img">
                         <div class="portfolio-overlay">
                             <h4>SEO Campaign</h4>
                             <p>Increased organic traffic by 300%</p>
-                            <a href="#" class="btn btn-light mt-2">View Case Study</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/600x400?text=Social+Media" alt="Project 2"
-                            class="img-fluid portfolio-img">
+                <div class="col-lg-3 col-md-6 portfolio-item seo" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-card">
+                        <img src="/product imgs/seo.jpeg" alt="Project 1" class="img-fluid portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h4>SEO Campaign</h4>
+                            <p>Increased organic traffic by 300%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 portfolio-item seo" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-card">
+                        <img src="/product imgs/seo3.png" alt="Project 1" class="img-fluid portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h4>SEO Campaign</h4>
+                            <p>Increased organic traffic by 300%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 portfolio-item social" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-card">
+                        <img src="/product imgs/social.jpeg" alt="Project 2" class="img-fluid portfolio-img">
                         <div class="portfolio-overlay">
                             <h4>Social Media Strategy</h4>
                             <p>Grew followers by 500% in 3 months</p>
-                            <a href="#" class="btn btn-light mt-2">View Case Study</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/600x400?text=PPC+Ads" alt="Project 3"
-                            class="img-fluid portfolio-img">
+                <div class="col-lg-3 col-md-6 portfolio-item social">
+                    <div class="portfolio-card">
+                        <img src="/product imgs/social1.webp" alt="Project 2" class="img-fluid portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h4>Social Media Strategy</h4>
+                            <p>Grew followers by 500% in 3 months</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 portfolio-item ppc">
+                    <div class="portfolio-card">
+                        <img src="/product imgs/ppc.webp" alt="Project 3" class="img-fluid portfolio-img">
                         <div class="portfolio-overlay">
                             <h4>PPC Advertising</h4>
                             <p>Reduced CPA by 40%</p>
-                            <a href="#" class="btn btn-light mt-2">View Case Study</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/600x400?text=Email+Marketing" alt="Project 4"
+                <div class="col-lg-3 col-md-6 portfolio-item email">
+                    <div class="portfolio-card">
+                        <img src="/product imgs/Email-Marketing-copy.webp" alt="Project 4"
                             class="img-fluid portfolio-img">
                         <div class="portfolio-overlay">
                             <h4>Email Marketing</h4>
                             <p>Increased open rates by 65%</p>
-                            <a href="#" class="btn btn-light mt-2">View Case Study</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/600x400?text=Content+Strategy" alt="Project 5"
-                            class="img-fluid portfolio-img">
+                <div class="col-lg-3 col-md-6 portfolio-item email">
+                    <div class="portfolio-card">
+                        <img src="/product imgs/Email-Marketing.jpg" alt="Project 4" class="img-fluid portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h4>Email Marketing</h4>
+                            <p>Increased open rates by 65%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Remaining items (hidden by default) -->
+                <div class="col-lg-3 col-md-6 portfolio-item content more-items" style="display: none;">
+                    <div class="portfolio-card">
+                        <img src="/product imgs/content.jpeg" alt="Project 5" class="img-fluid portfolio-img">
                         <div class="portfolio-overlay">
                             <h4>Content Strategy</h4>
                             <p>Generated 200+ leads per month</p>
-                            <a href="#" class="btn btn-light mt-2">View Case Study</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/600x400?text=Brand+Awareness" alt="Project 6"
-                            class="img-fluid portfolio-img">
+                <div class="col-lg-3 col-md-6 portfolio-item content more-items" style="display: none;">
+                    <div class="portfolio-card">
+                        <img src="/product imgs/content1.jpeg" alt="Project 5" class="img-fluid portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h4>Content Strategy</h4>
+                            <p>Generated 200+ leads per month</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 portfolio-item brand more-items" style="display: none;">
+                    <div class="portfolio-card">
+                        <img src="/product imgs/brand-marketing.jpeg" alt="Project 6" class="img-fluid portfolio-img">
                         <div class="portfolio-overlay">
                             <h4>Brand Awareness</h4>
                             <p>Increased brand recognition by 80%</p>
-                            <a href="#" class="btn btn-light mt-2">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 portfolio-item brand more-items" style="display: none;">
+                    <div class="portfolio-card">
+                        <img src="/product imgs/brand-marketing1.jpeg" alt="Project 6" class="img-fluid portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h4>Brand Awareness</h4>
+                            <p>Increased brand recognition by 80%</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="700">
-                <a href="#" class="btn btn-outline-primary">View All Projects</a>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary rounded-pill portfolio-btn px-4 py-2" id="toggleProjects">
+                    <span class="view-more-text">View More Projects</span>
+                </a>
             </div>
         </div>
     </section>
+
     <!--- Testimonials Section -->
     <section id="testimonials" class="py-5 py-lg-7 bg-light">
         <div class="container">
@@ -494,13 +660,31 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container text-center">
-            <h3 class="fw-bold text-white mb-4" data-aos="fade-up">Ready to Grow Your Business Online?</h3>
-            <p class="text-white-50 mb-5" data-aos="fade-up" data-aos-delay="100">Get a free consultation with our
-                digital marketing experts and discover how we can help you achieve your goals.</p>
-            <a href="#contact" class="btn btn-light btn-lg pulse" data-aos="fade-up" data-aos-delay="200">Get Your Free
-                Consultation</a>
+    <section class="cta-section py-5 py-lg-7 bg-dark text-white position-relative overflow-hidden">
+        <div class="position-absolute top-0 start-0 w-100 h-100">
+            <div class="cta-shape-1 position-absolute bg-primary rounded-circle"></div>
+            <div class="cta-shape-2 position-absolute bg-success rounded-circle"></div>
+        </div>
+
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 text-center">
+                    <span class="custom-badge">
+                        <h6 class="mb-0">LIMITED TIME OFFER</h6>
+                    </span>
+
+                    <h4 class="fw-bold mb-2 text-black mt-2">Ready to Transform Your Digital Presence?</h4>
+
+                    <p class="mb-5 text-muted">Struggling to get leads? We turn clicks into customers. Book your free
+                        audit now.</p>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                        <a href="contact.html"
+                            class="btn btn-outline-primary btn-lg px-4 py-3 fw-bold rounded-pill hover-lift">Let's
+                            Connect</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -700,8 +884,8 @@
                                         placeholder="Tell us about your project..."
                                         style="background-color: rgba(255,255,255,0.8); box-shadow: 0 2px 10px rgba(0,0,0,0.03); border-radius: 10px;"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100 py-3 mt-2 rounded-5" data-aos="fade-up"
-                                    data-aos-delay="300"
+                                <button type="submit" class="btn btn-primary w-100 py-3 mt-2 rounded-5"
+                                    data-aos="fade-up" data-aos-delay="300"
                                     style="border: none; background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%); box-shadow: 0 4px 15px rgba(13,110,253,0.3); border-radius: 10px; transition: all 0.3s ease;">
                                     Send Message <i class="fas fa-paper-plane ms-2"></i>
                                 </button>
@@ -887,7 +1071,7 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <a href="#" class="btn btn-primary btn-lg back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+    <a href="#" class="btn btn-danger back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -898,4 +1082,5 @@
     <!-- Custom JS -->
     <script src="digital.js"></script>
 </body>
+
 </html>
